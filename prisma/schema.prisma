@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL")
+}
+
+model Surat {
+  id              String    @id @default(cuid())
+  jenisSurat      String
+  kategori        String?
+  nomorSurat      String?
+  tanggalSurat    DateTime?
+  perihal         String?
+  pengirim        String?
+  tujuan          String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  // Fields for Surat Keterangan Usaha & Surat Keterangan
+  nama            String?
+  nik             String?
+  ttl             String?
+  jenisKelamin    String?
+  agama           String?
+  kewarganegaraan String?
+  alamat          String?
+  namaUsaha       String?
+  jenisUsaha      String?
+  pekerjaan       String?
+  suratBuktiDiri  String?
+  keperluan       String?
+  berlaku         String?
+  keteranganLain  String?
+}
