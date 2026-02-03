@@ -2,6 +2,8 @@ import { db } from '../../lib/firebase';
 import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 import KelahiranClient from './client';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
     title: 'Data Kelahiran',
     description: 'Halaman untuk mengelola data kelahiran warga.',
