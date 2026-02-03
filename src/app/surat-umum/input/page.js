@@ -2,6 +2,8 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../../lib/firebase';
 import InputSuratUmumClient from './client';
 
+export const dynamic = 'force-dynamic';
+
 // Fungsi untuk mengambil data surat berdasarkan ID
 async function getSuratById(id) {
     if (!id) return null;
