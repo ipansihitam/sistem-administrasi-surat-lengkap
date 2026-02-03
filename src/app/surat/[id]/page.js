@@ -1,4 +1,4 @@
-import { db } from '@/lib/firebase';
+import { db } from '../../../lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';

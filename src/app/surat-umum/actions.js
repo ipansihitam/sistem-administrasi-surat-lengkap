@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { db } from '../../lib/firebase';
 import { z } from 'zod';
 
 // --- PERBAIKAN FINAL: Skema validasi yang lebih kuat dan spesifik ---
